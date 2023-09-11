@@ -3,43 +3,49 @@ import styled from "styled-components";
 const HeaderDiv = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  margin-right: auto;
   width: 100%;
-  height: 120px;
+  height: 40px;
   font-size: 13px;
+  align-items: center;
+  justify-content: center;
 `;
 
 const MainDiv = styled.div`
   display: flex;
   width: 80%;
   margin: 0 auto;
-  justify-content: space-between;
-  > img {
-    width: 230px;
-    height: 53px;
-  }
-`;
-
-const MainContentSection = styled.div`
-  display: flex;
+  justify-content: flex-end;
 `;
 
 const MainContentDiv = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 80px;
-`;
-
-const SubDiv = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-  width: 80%;
-  margin: 0 auto;
-  > p {
-    width: 60px;
+  width: 65px;
+  font-size: 10px;
+  > svg {
+    width: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 90px;
+    font-size: 14px;
+    > svg {
+      width: 14px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    width: 100px;
+    font-size: 18px;
+    > svg {
+      width: 20px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    width: 140px;
+    font-size: 24px;
+    > svg {
+      width: 30px;
+    }
   }
 `;
 
@@ -47,57 +53,46 @@ const Header = () => {
   return (
     <HeaderDiv>
       <MainDiv>
-        <img
-          src="https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-          alt="로고"
-        />
-        <MainContentSection>
-          <MainContentDiv>
-            <svg
-              fill="none"
-              width="30"
-              height="40"
-              stroke="currentColor"
-              strokeWidth={1.5}
-              viewBox="0 0 25 25"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
-              />
-            </svg>
-            <p>로그인</p>
-          </MainContentDiv>
-          <MainContentDiv>
-            <svg
-              fill="none"
-              width="30"
-              height="40"
-              stroke="currentColor"
-              strokeWidth={1.5}
-              viewBox="0 0 25 25"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"
-              />
-            </svg>
-            <p>빠른 예매</p>
-          </MainContentDiv>
-        </MainContentSection>
+        <MainContentDiv>
+          <svg
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={1.5}
+            viewBox="0 0 25 25"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+            />
+          </svg>
+          <p>로그인</p>
+        </MainContentDiv>
+        <MainContentDiv>
+          <svg
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={1.5}
+            viewBox="0 0 25 25"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          <p>마이페이지</p>
+        </MainContentDiv>
       </MainDiv>
-      <SubDiv>
-        <p>영화</p>
-        <p>극장</p>
-        <p>예매</p>
-        <p>혜택</p>
-      </SubDiv>
     </HeaderDiv>
   );
 };
