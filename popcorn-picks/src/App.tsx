@@ -1,7 +1,7 @@
-import React from "react";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import MainPage from "./pages/MainPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Header />
       <Nav />
       <MainPage />
+      <Footer />
     </>
   );
 }
