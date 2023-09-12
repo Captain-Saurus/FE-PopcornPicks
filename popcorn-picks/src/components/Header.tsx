@@ -22,29 +22,29 @@ const MainContentDiv = styled.div`
   display: flex;
   align-items: center;
   width: 65px;
-  font-size: 10px;
+  font-size: 12px;
   > svg {
-    width: 12px;
+    width: 14px;
   }
   @media screen and (min-width: 768px) {
     width: 90px;
-    font-size: 14px;
+    font-size: 13px;
     > svg {
-      width: 14px;
+      width: 18px;
     }
   }
   @media screen and (min-width: 1024px) {
     width: 100px;
-    font-size: 18px;
+    font-size: 15px;
     > svg {
-      width: 20px;
+      width: 18px;
     }
   }
   @media screen and (min-width: 1440px) {
     width: 140px;
-    font-size: 24px;
+    font-size: 15px;
     > svg {
-      width: 30px;
+      width: 18px;
     }
   }
 `;
