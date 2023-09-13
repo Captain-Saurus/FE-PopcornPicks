@@ -23,6 +23,9 @@ const MainContentDiv = styled.div`
   align-items: center;
   width: 65px;
   font-size: 12px;
+  &:hover {
+    cursor: pointer;
+  }
   > svg {
     width: 14px;
   }

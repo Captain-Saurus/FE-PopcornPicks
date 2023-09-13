@@ -21,6 +21,10 @@ const NavDiv = styled.div`
     height: 45px;
     > p {
       font-size: 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   @media screen and (min-width: 1024px) {
