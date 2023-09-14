@@ -1,5 +1,25 @@
 import styled from "styled-components";
 import WhiteCircle from "../styles/components/WhiteCircle";
+import { Link } from "react-router-dom";
+
+const Nav = () => {
+  return (
+    <>
+      <NavDiv>
+        <span>
+          <Link to="/movie">영화</Link>
+        </span>
+        <span>
+          <Link to="/theater">극장</Link>
+        </span>
+        <WhiteCircle />
+        <span>일반 예매</span>
+        <span>퍼스널 예매</span>
+      </NavDiv>
+    </>
+  );
+};
+export default Nav;
 
 const NavDiv = styled.div`
   display: flex;
@@ -10,7 +30,7 @@ const NavDiv = styled.div`
   width: 100%;
   height: 40px;
   background-color: #fd7f49;
-  > p {
+  > span {
     display: flex;
     width: 20%;
     height: 100%;
@@ -19,7 +39,7 @@ const NavDiv = styled.div`
   }
   @media screen and (min-width: 768px) {
     height: 45px;
-    > p {
+    > span {
       font-size: 16px;
 
       &:hover {
@@ -34,18 +54,3 @@ const NavDiv = styled.div`
     height: 52px;
   }
 `;
-
-const Nav = () => {
-  return (
-    <>
-      <NavDiv>
-        <p>영화</p>
-        <p>극장</p>
-        <WhiteCircle />
-        <p>예매</p>
-        <p>혜택</p>
-      </NavDiv>
-    </>
-  );
-};
-export default Nav;

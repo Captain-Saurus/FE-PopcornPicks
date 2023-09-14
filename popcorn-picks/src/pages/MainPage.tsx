@@ -1,6 +1,41 @@
 import styled from "styled-components";
 import WhiteCircle from "../styles/components/WhiteCircle";
 
+const MainPage = () => {
+  return (
+    <>
+      <MainImgDiv
+        src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1156&q=80"
+        alt="영화 홍보 이미지"
+      />
+      <RankSection>
+        {dummy.map((item, index: number) => {
+          return (
+            <RankDiv key={index}>
+              <p>1</p>
+              <RankImgDiv
+                src="https://plus.unsplash.com/premium_photo-1675063044882-522a7d281b2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80"
+                alt="랭크 이미지"
+              />
+              <p>영화 제목</p>
+            </RankDiv>
+          );
+        })}
+      </RankSection>
+      <MainInfoSection>
+        <MainInfoDiv>
+          <WhiteCircle />
+          <WhiteCircle />
+          <WhiteCircle />
+          <WhiteCircle />
+          <WhiteCircle />
+        </MainInfoDiv>
+      </MainInfoSection>
+    </>
+  );
+};
+export default MainPage;
+
 const ImgDiv = styled.img`
   display: flex;
   object-fill: cover;
@@ -96,38 +131,3 @@ const MainInfoDiv = styled.div`
 `;
 
 const dummy = [1, 2, 3, 4, 5];
-
-const MainPage = () => {
-  return (
-    <>
-      <MainImgDiv
-        src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1156&q=80"
-        alt="영화 홍보 이미지"
-      />
-      <RankSection>
-        {dummy.map((item, index: number) => {
-          return (
-            <RankDiv key={index}>
-              <p>1</p>
-              <RankImgDiv
-                src="https://plus.unsplash.com/premium_photo-1675063044882-522a7d281b2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80"
-                alt="랭크 이미지"
-              />
-              <p>영화 제목</p>
-            </RankDiv>
-          );
-        })}
-      </RankSection>
-      <MainInfoSection>
-        <MainInfoDiv>
-          <WhiteCircle />
-          <WhiteCircle />
-          <WhiteCircle />
-          <WhiteCircle />
-          <WhiteCircle />
-        </MainInfoDiv>
-      </MainInfoSection>
-    </>
-  );
-};
-export default MainPage;
