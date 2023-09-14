@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import MovieCard from "../styles/components/MovieCard";
 
 const MoviePage = () => {
   return (
@@ -10,7 +11,12 @@ const MoviePage = () => {
           <p>상영 중인 영화만 보기</p>
         </MovieFilterDiv>
       </MovieHeaderSection>
-      <p>moviep</p>
+      <MovieBodySection>
+        {dummy.map((item) => {
+          //TODO : 더미 -> API 쏘는 데이터로 변환하기
+          return <MovieCard />;
+        })}
+      </MovieBodySection>
     </>
   );
 };
@@ -23,7 +29,7 @@ const MovieHeaderSection = styled.section`
   width: 90%;
   justify-content: space-between;
   align-items: center;
-  margin: 2% auto;
+  margin: 6% auto;
   > p {
     font-weight: bold;
   }
@@ -34,4 +40,12 @@ const MovieFilterDiv = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
+`;
+
+const MovieBodySection = styled.section`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 6%;
 `;
