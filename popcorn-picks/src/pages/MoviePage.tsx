@@ -12,9 +12,9 @@ const MoviePage = () => {
         </MovieFilterDiv>
       </MovieHeaderSection>
       <MovieBodySection>
-        {dummy.map((item) => {
+        {dummy.map((item, index: number) => {
           //TODO : 더미 -> API 쏘는 데이터로 변환하기
-          return <MovieCard />;
+          return <MovieCard key={index} />;
         })}
       </MovieBodySection>
     </>
@@ -33,6 +33,16 @@ const MovieHeaderSection = styled.section`
   > p {
     font-weight: bold;
   }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 23px;
+    margin: 3% auto;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 24px;
+  }
 `;
 
 const MovieFilterDiv = styled.div`
@@ -40,6 +50,12 @@ const MovieFilterDiv = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 18px;
+  }
 `;
 
 const MovieBodySection = styled.section`
@@ -47,5 +63,5 @@ const MovieBodySection = styled.section`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 6%;
+  margin-top: 3%;
 `;

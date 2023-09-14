@@ -31,6 +31,13 @@ const MovieCardDiv = styled.div`
   border: 1px solid black;
   border-radius: 3px;
   margin-top: 6%;
+  @media screen and (min-width: 768px) {
+    height: 240px;
+  }
+  @media screen and (min-width: 1024px) {
+    height: 360px;
+    margin-top: 1%;
+  }
 `;
 
 const MovieImg = styled.img`
@@ -40,6 +47,12 @@ const MovieImg = styled.img`
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center;
+  @media screen and (min-width: 768px) {
+    height: 160px;
+  }
+  @media screen and (min-width: 1024px) {
+    height: 260px;
+  }
 `;
 
 const MovieInfoDiv = styled.div`
@@ -47,7 +60,14 @@ const MovieInfoDiv = styled.div`
   width: 100%;
   height: 60px;
   flex-direction: column;
-  justify-contents: center;
+  align-items: center;
+  margin-top: 1%;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
+  @media screen and (min-width: 1024px) {
+    height: 100px;
+  }
 `;
 
 const MovieTitleDiv = styled.div`
@@ -55,12 +75,42 @@ const MovieTitleDiv = styled.div`
   width : 100%:
   height : 40%;
   align-items: center;
+  font-size : 16px;
+  @media screen and (min-width: 768px) {
+    font-size : 18px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size : 20px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size : 24px;
+  }
 `;
 
 const MovieDateDiv = styled.div`
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
+  width: 90%;
   height: 60%;
-  font-size: 11px;
-  align-items: center;
+  align-items: end;
+  justify-content: space-between;
+  > p {
+    display: flex;
+    font-size: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    > p {
+      font-size: 14px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    > p {
+      font-size: 16px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    > p {
+      font-size: 20px;
+    }
+  }
 `;
