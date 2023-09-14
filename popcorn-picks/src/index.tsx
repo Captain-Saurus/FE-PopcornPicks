@@ -5,9 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import reset from "styled-reset";
 import { createGlobalStyle } from "styled-components";
+import { BrowserRouter } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
 ${reset}
+a{
+  text-decoration : none;
+  color : black;
+}
 `;
 
 const root = ReactDOM.createRoot(
@@ -16,7 +21,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
