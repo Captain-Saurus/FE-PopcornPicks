@@ -57,14 +57,20 @@ const TheaterHeaderSection = styled.section`
     font-size: 14px;
   }
   @media screen and (min-width: 768px) {
-    font-size: 20px;
+    > p {
+      font-size: 20px;
+    }
   }
   @media screen and (min-width: 1024px) {
-    font-size: 23px;
     margin: 3% auto;
+    > p {
+      font-size: 23px;
+    }
   }
   @media screen and (min-width: 1440px) {
-    font-size: 24px;
+    > p {
+      font-size: 26px;
+    }
   }
 `;
 
@@ -88,10 +94,16 @@ const TheaterRegionDiv = styled.div`
   flex-grow: 1;
   box-shadow: 0 0 1px 0 #888;
   align-items: center;
+  @media screen and (min-width: 1440px) {
+    font-size: 28px;
+  }
 `;
 
 const TheaterRegionInfoDiv = styled.div`
   display: flex;
+  @media screen and (min-width: 1440px) {
+    font-size: 22px;
+  }
 `;
 
 const TheaterInfoSection = styled.section`
@@ -100,6 +112,11 @@ const TheaterInfoSection = styled.section`
   width: 90%;
   height: 20vh;
   margin: 3% auto;
+  @media screen and (min-width: 1440px) {
+    margin: 1% auto;
+    font-size: 20px;
+    height: 16vh;
+  }
 `;
 
 const TheaterTitleDiv = styled.div`
