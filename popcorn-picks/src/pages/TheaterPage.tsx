@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { region } from "../constants/constants";
+import Button from "../styles/components/Button";
 
 const TheaterPage = () => {
   return (
@@ -41,6 +42,9 @@ const TheaterPage = () => {
           <p>3층 : </p>
         </TheaterSubContentDiv>
       </TheaterInfoSection>
+      <ButtonSection>
+        <Button comment="예매하기" />
+      </ButtonSection>
     </>
   );
 };
@@ -138,4 +142,10 @@ const TheaterSubContentDiv = styled.div`
   display: flex;
   flex-direction: column;
   height: 2vh;
+`;
+
+const ButtonSection = styled.section`
+  display: flex;
+  margin-left: 5%;
+  width: 15%;
 `;
