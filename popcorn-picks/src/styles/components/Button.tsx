@@ -31,4 +31,7 @@ const ButtonDiv = styled.div`
   @media screen and (min-width: 1440px) {
     height: 55px;
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;

@@ -13,8 +13,12 @@ const Nav = () => {
           <Link to="/theater">극장</Link>
         </span>
         <WhiteCircle />
-        <span>일반 예매</span>
-        <span>퍼스널 예매</span>
+        <span>
+          <Link to="/reservation">일반 예매</Link>
+        </span>
+        <span>
+          <Link to="/personalReservation">퍼스널 예매</Link>
+        </span>
       </NavDiv>
     </>
   );

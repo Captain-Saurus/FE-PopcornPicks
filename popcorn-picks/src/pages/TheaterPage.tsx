@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { region } from "../constants/constants";
+import { REGION } from "../constants/constants";
 import Button from "../styles/components/Button";
 
 const TheaterPage = () => {
@@ -10,7 +10,7 @@ const TheaterPage = () => {
       </TheaterHeaderSection>
       <TheaterRegionSection>
         <TheaterRegionTitleDiv>
-          {region.map((regionName, index: number) => {
+          {REGION.map((regionName, index: number) => {
             return (
               <TheaterRegionDiv key={index}>{regionName}</TheaterRegionDiv>
             );
