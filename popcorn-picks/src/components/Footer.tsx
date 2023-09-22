@@ -1,12 +1,11 @@
+import React from "react";
 import styled from "styled-components";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <>
-      <FooterSection>
-        <p>footer data </p>
-      </FooterSection>
-    </>
+    <FooterSection>
+      <p>footer data </p>
+    </FooterSection>
   );
 };
 export default Footer;

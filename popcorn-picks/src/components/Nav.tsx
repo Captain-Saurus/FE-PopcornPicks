@@ -1,8 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 import WhiteCircle from "../styles/components/WhiteCircle";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav: React.FC = () => {
   return (
     <>
       <NavDiv>
