@@ -54,7 +54,7 @@ const RegionDiv = styled.div`
 const TheaterListDiv = styled.div`
   display: flex;
   border: 1px solid black;
-  height: 40px;
+  height: 70px;
   align-items: center;
   justify-contents: center;
 `;

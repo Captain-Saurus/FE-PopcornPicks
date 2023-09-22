@@ -18,7 +18,7 @@ const ReservationSection = styled.section`
   flex-direction: column;
   width: 99%;
   height: 70vh;
-  margin: 2% auto;
+  margin: 4% auto;
   border: 1px solid black;
   font-size: 10px;
 `;
