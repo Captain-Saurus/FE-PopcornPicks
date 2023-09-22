@@ -1,5 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import {
+  TABLET_SIZE,
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+} from "../constants/constants";
 
 const Header: React.FC = () => {
   return (
@@ -79,21 +84,21 @@ const MainContentDiv = styled.div`
   > svg {
     width: 14px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     width: 90px;
     font-size: 13px;
     > svg {
       width: 18px;
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     width: 100px;
     font-size: 15px;
     > svg {
       width: 18px;
     }
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     width: 140px;
     font-size: 15px;
     > svg {

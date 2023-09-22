@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import WhiteCircle from "../styles/components/WhiteCircle";
+import {
+  TABLET_SIZE,
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+} from "../constants/constants";
 
 const MainPage = () => {
   return (
@@ -44,13 +49,13 @@ const ImgDiv = styled.img`
 const MainImgDiv = styled(ImgDiv)`
   width: 100%;
   max-height: 180px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     max-height: 200px;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     max-height: 250px;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     max-height: 300px;
   }
 `;
@@ -86,17 +91,17 @@ const RankDiv = styled.div`
     margin-top: 4%;
     margin-bottom: 4%;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     > p {
       font-size: 16px;
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     > p {
       font-size: 18px;
     }
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     > p {
       font-size: 22px;
     }
@@ -110,13 +115,13 @@ const MainInfoSection = styled.section`
   width: 100%;
   height: 80px;
   margin-top: 8%;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     height: 100px;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     height: 120px;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     height: 150px;
   }
 `;

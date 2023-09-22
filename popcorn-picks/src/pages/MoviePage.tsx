@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import MovieCard from "../styles/components/MovieCard";
+import {
+  TABLET_SIZE,
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+} from "../constants/constants";
 
 const MoviePage = () => {
   return (
@@ -33,14 +38,14 @@ const MovieHeaderSection = styled.section`
   > p {
     font-weight: bold;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     font-size: 20px;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     font-size: 23px;
     margin: 3% auto;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     font-size: 24px;
   }
 `;
@@ -50,10 +55,10 @@ const MovieFilterDiv = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     font-size: 16px;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     font-size: 18px;
   }
 `;

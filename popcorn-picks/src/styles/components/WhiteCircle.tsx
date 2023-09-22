@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import {
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+  TABLET_SIZE,
+} from "../../constants/constants";
 
 //TODO : 내부 SVG 파일은 props로 받아서 재사용할 수 있도록 수정하기
 const WhiteCircle = () => {
@@ -37,21 +42,21 @@ const CircleStyle = styled.div`
   > svg {
     width: 20px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     width: 70px;
     height: 70px;
     > svg {
       width: 30px;
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     width: 80px;
     height: 80px;
     > svg {
       width: 35px;
     }
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     width: 100px;
     height: 100px;
     > svg {

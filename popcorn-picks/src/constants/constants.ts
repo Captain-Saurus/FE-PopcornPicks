@@ -15,4 +15,14 @@ const RESERVATION_PROCESS: string[] = [
   "결제완료",
 ];
 
-export { REGION, RESERVATION_PROCESS };
+const TABLET_SIZE: string = "768px";
+const LAPTOP_SIZE: string = "1024px";
+const LAPTOP_LARGE_SIZE: string = "1440px";
+
+export {
+  REGION,
+  RESERVATION_PROCESS,
+  TABLET_SIZE,
+  LAPTOP_SIZE,
+  LAPTOP_LARGE_SIZE,
+};

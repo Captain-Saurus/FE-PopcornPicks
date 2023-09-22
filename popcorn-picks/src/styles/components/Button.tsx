@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import {
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+  TABLET_SIZE,
+} from "../../constants/constants";
 
 interface ButtonProps {
   comment: string | { text: string };
@@ -22,13 +27,13 @@ const ButtonDiv = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     height: 40px;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     height: 55px;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     height: 55px;
   }
   &:hover {

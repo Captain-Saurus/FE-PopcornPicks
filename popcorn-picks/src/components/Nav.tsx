@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import WhiteCircle from "../styles/components/WhiteCircle";
 import { Link } from "react-router-dom";
+import {
+  TABLET_SIZE,
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+} from "../constants/constants";
 
 const Nav: React.FC = () => {
   return (
@@ -42,7 +47,7 @@ const NavDiv = styled.div`
     align-items: center;
     justify-content: center;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${TABLET_SIZE}) {
     height: 45px;
     > span {
       font-size: 16px;
@@ -52,10 +57,10 @@ const NavDiv = styled.div`
       }
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
     height: 48px;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     height: 52px;
   }
 `;
