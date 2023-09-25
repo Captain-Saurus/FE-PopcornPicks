@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { RESERVATION_PROCESS, REGION } from "../../../constants/constants";
 import {
@@ -6,7 +7,7 @@ import {
   LAPTOP_SIZE,
 } from "../../../constants/constants";
 
-const Reservation = () => {
+const Reservation: React.FC = () => {
   return (
     <>
       <ProcessSection>

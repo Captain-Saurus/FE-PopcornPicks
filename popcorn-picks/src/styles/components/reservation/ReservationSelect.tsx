@@ -1,6 +1,7 @@
+import React from "react";
 import styled from "styled-components";
 
-const ReservationSelect = () => {
+const ReservationSelect: React.FC = () => {
   return (
     <>
       <MovieListDiv>

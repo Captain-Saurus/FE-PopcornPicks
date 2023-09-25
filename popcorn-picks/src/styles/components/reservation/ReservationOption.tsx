@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import ReservationBox from "./ReservationBox";
 import MovieCard from "../MovieCard";
@@ -17,7 +18,7 @@ const mockDataStyle = {
   content: ["#영상미", "#사운드", "#출입구 가까이", "#맨 앞자리"],
 };
 
-const ReservationOption = () => {
+const ReservationOption: React.FC = () => {
   return (
     <>
       <OptionSection>
@@ -35,7 +36,7 @@ const ReservationOption = () => {
         {
           // todo 피그마 요구사항에 맞춰 수정하기 영화 포스터 및 정보데이터 재사용하게 컴포넌트 분리하기
         }
-        <MovieCard></MovieCard>
+        {/* <MovieCard></MovieCard>/ */}
       </RecommendSection>
     </>
   );

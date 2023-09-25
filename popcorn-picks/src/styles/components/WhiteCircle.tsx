@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import {
   LAPTOP_LARGE_SIZE,
@@ -6,7 +7,7 @@ import {
 } from "../../constants/constants";
 
 //TODO : 내부 SVG 파일은 props로 받아서 재사용할 수 있도록 수정하기
-const WhiteCircle = () => {
+const WhiteCircle: React.FC = () => {
   return (
     <>
       <CircleStyle>

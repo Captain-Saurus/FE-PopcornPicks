@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import {
   LAPTOP_LARGE_SIZE,
@@ -5,7 +6,7 @@ import {
   TABLET_SIZE,
 } from "../../constants/constants";
 
-const MovieCard = () => {
+const MovieCard: React.FC = () => {
   return (
     <MovieCardDiv>
       <MovieImg

@@ -1,8 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 import Reservation from "../styles/components/reservation/ReservationCommon";
 import ReservationOption from "../styles/components/reservation/ReservationSelect";
 
-const ReservationPage = () => {
+const ReservationPage: React.FC = () => {
   return (
     <ReservationSection>
       <Reservation />

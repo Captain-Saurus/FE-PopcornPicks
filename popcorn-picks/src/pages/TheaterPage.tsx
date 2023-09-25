@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { REGION } from "../constants/constants";
 import Button from "../styles/components/Button";
@@ -7,7 +8,7 @@ import {
   LAPTOP_SIZE,
 } from "../constants/constants";
 
-const TheaterPage = () => {
+const TheaterPage: React.FC = () => {
   return (
     <>
       <TheaterHeaderSection>

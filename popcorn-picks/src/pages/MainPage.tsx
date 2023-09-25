@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import WhiteCircle from "../styles/components/WhiteCircle";
 import {
@@ -6,7 +7,7 @@ import {
   LAPTOP_SIZE,
 } from "../constants/constants";
 
-const MainPage = () => {
+const MainPage: React.FC = () => {
   return (
     <>
       <MainImgDiv

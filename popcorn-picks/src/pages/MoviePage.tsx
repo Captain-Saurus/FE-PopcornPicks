@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import MovieCard from "../styles/components/MovieCard";
 import {
@@ -6,7 +7,7 @@ import {
   LAPTOP_SIZE,
 } from "../constants/constants";
 
-const MoviePage = () => {
+const MoviePage: React.FC = () => {
   return (
     <>
       <MovieHeaderSection>
