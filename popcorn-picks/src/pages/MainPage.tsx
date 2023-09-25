@@ -6,8 +6,15 @@ import {
   LAPTOP_LARGE_SIZE,
   LAPTOP_SIZE,
 } from "../constants/constants";
+import { useNavigate } from "react-router-dom";
 
 const MainPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  //todo : 검색해서도 들어갈 수 있도록 영화의 이름을 라우팅으로 날리고 싶음
+  const RoutingMovie = (index: number) => {
+    navigate(`/movie/${index}`);
+  };
   return (
     <>
       <MainImgDiv
@@ -17,7 +24,7 @@ const MainPage: React.FC = () => {
       <RankSection>
         {dummy.map((item, index: number) => {
           return (
-            <RankDiv key={index}>
+            <RankDiv key={index} onClick={() => RoutingMovie(index)}>
               <p>1</p>
               <RankImgDiv
                 src="https://plus.unsplash.com/premium_photo-1675063044882-522a7d281b2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80"
@@ -59,6 +66,9 @@ const MainImgDiv = styled(ImgDiv)`
   @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     max-height: 300px;
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const RankImgDiv = styled(ImgDiv)`
@@ -70,6 +80,9 @@ const RankSection = styled.div`
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const RankDiv = styled.div`

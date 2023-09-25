@@ -64,4 +64,7 @@ const CircleStyle = styled.div`
       width: 40px;
     }
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;
