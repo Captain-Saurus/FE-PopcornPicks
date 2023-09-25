@@ -18,7 +18,9 @@ const Nav: React.FC = () => {
         <span>
           <Link to="/theater">극장</Link>
         </span>
-        <WhiteCircle />
+        <Link to="/">
+          <WhiteCircle />
+        </Link>
         <span>
           <Link to="/reservation">일반 예매</Link>
         </span>

@@ -25,7 +25,7 @@ export default Reservation;
 
 const ProcessSection = styled.section`
   display: flex;
-  height: 40px;
+  height: 50px;
 `;
 
 const ProcessDiv = styled.div`
@@ -39,7 +39,7 @@ const ProcessDiv = styled.div`
 const TheaterRegionDiv = styled.div`
   display: flex;
   flex-direction: row;
-  height: 40px;
+  height: 50px;
   border-bottom: 1px solid black;
 `;
 
@@ -54,7 +54,7 @@ const RegionDiv = styled.div`
 const TheaterListDiv = styled.div`
   display: flex;
   border: 1px solid black;
-  height: 70px;
+  height: 90px;
   align-items: center;
   justify-contents: center;
 `;
