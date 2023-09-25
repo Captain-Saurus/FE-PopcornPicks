@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { RESERVATION_PROCESS, REGION } from "../../../constants/constants";
+import {
+  TABLET_SIZE,
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+} from "../../../constants/constants";
 
 const Reservation = () => {
   return (
@@ -26,6 +31,12 @@ export default Reservation;
 const ProcessSection = styled.section`
   display: flex;
   height: 50px;
+  @media screen and (min-width: ${TABLET_SIZE}) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    font-size: 16px;
+  }
 `;
 
 const ProcessDiv = styled.div`
@@ -49,6 +60,12 @@ const RegionDiv = styled.div`
   flex-grow: 1;
   font-size: 10px;
   align-items: center;
+  @media screen and (min-width: ${TABLET_SIZE}) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    font-size: 16px;
+  }
 `;
 
 const TheaterListDiv = styled.div`

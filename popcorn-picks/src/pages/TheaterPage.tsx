@@ -72,11 +72,13 @@ const TheaterHeaderSection = styled.section`
   }
   @media screen and (min-width: ${LAPTOP_SIZE}) {
     margin: 3% auto;
+    width: 80%;
     > p {
       font-size: 23px;
     }
   }
   @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
+    width: 80%;
     > p {
       font-size: 26px;
     }
@@ -89,6 +91,12 @@ const TheaterRegionSection = styled.div`
   height: 40vh;
   margin: 0 auto;
   box-shadow: 1px 0 0 0 #888, 0 1px 0 0 #888, 0 0 1px 0 #888 inset, 0 0 0 1px;
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    width: 80%;
+  }
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
+    width: 80%;
+  }
 `;
 
 const TheaterRegionTitleDiv = styled.div`
@@ -121,8 +129,12 @@ const TheaterInfoSection = styled.section`
   width: 90%;
   height: 20vh;
   margin: 3% auto;
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    width: 80%;
+  }
   @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
     margin: 1% auto;
+    width: 80%;
     font-size: 20px;
     height: 16vh;
   }
@@ -151,6 +163,6 @@ const TheaterSubContentDiv = styled.div`
 
 const ButtonSection = styled.section`
   display: flex;
-  margin-left: 5%;
+  margin-left: 10%;
   width: 15%;
 `;

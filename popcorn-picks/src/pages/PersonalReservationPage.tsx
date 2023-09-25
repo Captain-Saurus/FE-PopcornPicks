@@ -15,7 +15,7 @@ export default PersonalReservationPage;
 const ReservationSection = styled.section`
   display: flex;
   flex-direction: column;
-  width: 99%;
+  width: 80%;
   height: 70vh;
   margin: 4% auto;
   border: 1px solid black;
