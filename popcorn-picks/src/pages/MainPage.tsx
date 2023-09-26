@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import WhiteCircle from "../styles/components/WhiteCircle";
+import MovieImage from "../styles/components/common/MovieImage";
 import {
   TABLET_SIZE,
   LAPTOP_LARGE_SIZE,
   LAPTOP_SIZE,
 } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
-
 const MainPage: React.FC = () => {
   const navigate = useNavigate();
 
@@ -26,10 +26,7 @@ const MainPage: React.FC = () => {
           return (
             <RankDiv key={index} onClick={() => RoutingMovie(index)}>
               <p>1</p>
-              <RankImgDiv
-                src="https://plus.unsplash.com/premium_photo-1675063044882-522a7d281b2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80"
-                alt="랭크 이미지"
-              />
+              <MovieImage imgSrc="https://plus.unsplash.com/premium_photo-1675063044882-522a7d281b2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80" />
               <p>영화 제목</p>
             </RankDiv>
           );
