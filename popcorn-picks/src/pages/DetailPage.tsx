@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import MovieImage from "../styles/components/common/MovieImage";
+import Button from "../styles/components/common/Button";
+import {
+  TABLET_SIZE,
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+} from "../constants/constants";
 
 /**
  * @todo 이미지 클릭 시 데이터 받아서 출력해주기
@@ -32,7 +38,7 @@ const DetailPage: React.FC = () => {
             <SubInfo>개봉일 : 1111.11.11</SubInfo>
           </InfoRow>
           <InfoRow>
-            <SubInfo>예매하기 버튼</SubInfo>
+            <Button comment={"예매하기"} />
           </InfoRow>
           <InfoRow>
             <SubInfo>줄거리</SubInfo>
@@ -51,6 +57,16 @@ const DetailSection = styled.section`
   height: 65vh;
   justify-content: space-around;
   margin-top: 10%;
+  @media screen and (min-width: ${TABLET_SIZE}) {
+  }
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    width: 80%;
+    margin: 10% auto;
+  }
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
+    width: 80%;
+    margin: 10% auto;
+  }
 `;
 
 const ImageDiv = styled.div`

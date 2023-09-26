@@ -3,7 +3,7 @@ import {
   LAPTOP_LARGE_SIZE,
   LAPTOP_SIZE,
   TABLET_SIZE,
-} from "../../constants/constants";
+} from "../../../constants/constants";
 
 interface ButtonProps {
   comment: string | { text: string };

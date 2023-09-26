@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { REGION } from "../constants/constants";
-import Button from "../styles/components/Button";
+import Button from "../styles/components/common/Button";
 import {
   TABLET_SIZE,
   LAPTOP_LARGE_SIZE,
@@ -164,6 +164,11 @@ const TheaterSubContentDiv = styled.div`
 
 const ButtonSection = styled.section`
   display: flex;
-  margin-left: 10%;
-  width: 15%;
+  width: 20%;
+  margin-left: 7%;
+
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    width: 15%;
+    margin-left: 10%;
+  }
 `;
