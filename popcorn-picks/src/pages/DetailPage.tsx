@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MovieImage from "../styles/components/common/MovieImage";
 import Button from "../styles/components/common/Button";
-import {
-  TABLET_SIZE,
-  LAPTOP_LARGE_SIZE,
-  LAPTOP_SIZE,
-} from "../constants/constants";
+import { LAPTOP_LARGE_SIZE, LAPTOP_SIZE } from "../constants/constants";
 
 /**
  * @todo 이미지 클릭 시 데이터 받아서 출력해주기
@@ -57,8 +53,7 @@ const DetailSection = styled.section`
   height: 65vh;
   justify-content: space-around;
   margin-top: 10%;
-  @media screen and (min-width: ${TABLET_SIZE}) {
-  }
+
   @media screen and (min-width: ${LAPTOP_SIZE}) {
     width: 80%;
     margin: 10% auto;

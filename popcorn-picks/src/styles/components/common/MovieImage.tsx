@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { LAPTOP_SIZE } from "../../../constants/constants";
 
 interface IMovieImageProps {
   imgSrc: string;
@@ -15,4 +16,8 @@ const ImgDiv = styled.img`
   display: flex;
   object-fill: cover;
   width: 100%;
+
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    height: 50vh;
+  }
 `;

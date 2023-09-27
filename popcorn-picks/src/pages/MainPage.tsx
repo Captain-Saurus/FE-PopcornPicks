@@ -68,10 +68,6 @@ const MainImgDiv = styled(ImgDiv)`
   }
 `;
 
-const RankImgDiv = styled(ImgDiv)`
-  width: 100%;
-`;
-
 const RankSection = styled.div`
   display: flex;
   flex-direction: row;
