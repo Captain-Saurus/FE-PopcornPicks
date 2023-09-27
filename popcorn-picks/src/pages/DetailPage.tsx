@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import MovieImage from "../styles/components/common/MovieImage";
 import Button from "../styles/components/common/Button";
-import { LAPTOP_LARGE_SIZE, LAPTOP_SIZE } from "../constants/constants";
+import {
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+  TABLET_SIZE,
+} from "../constants/constants";
 
 /**
  * @todo 이미지 클릭 시 데이터 받아서 출력해주기
