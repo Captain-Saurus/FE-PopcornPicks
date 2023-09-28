@@ -5,6 +5,8 @@ import {
   LAPTOP_SIZE,
   LAPTOP_LARGE_SIZE,
 } from "../constants/constants";
+import ReservationSeatBox from "../styles/components/reservation/ReservationSeatBox";
+import Button from "../styles/components/common/Button";
 
 const Modal: React.FC = () => {
   const closeModal = () => {};
@@ -14,10 +16,21 @@ const Modal: React.FC = () => {
         <ModalHeader>영화이름/시간/n관</ModalHeader>
         <CloseButton>X</CloseButton>
         <ModalSeatInfo>잔여좌석 n/n</ModalSeatInfo>
-        <p>zsdsd</p>
-        <p>zsdsd</p>
-        <p>zsdsd</p>
-        <p>zsdsd</p>
+        <ScreenDiv>screen</ScreenDiv>
+        <SeatDiv>
+          {/**
+           * @todo 시트박스 정보 , 위치에 따라 렌더링 수정 필요
+           */}
+          <ReservationSeatBox />
+          <ReservationSeatBox />
+          <ReservationSeatBox />
+          <ReservationSeatBox />
+          <ReservationSeatBox />
+        </SeatDiv>
+        <ButtonDiv>
+          <Button comment={"취소"} />
+          <Button comment={"인원/좌석 선택"} />
+        </ButtonDiv>
       </ModalContainer>
     </>
   );
@@ -39,10 +52,13 @@ const ModalContainer = styled.section`
 `;
 
 const ModalHeader = styled.section`
+  display: flex;
   width: 100%;
-  text-align: center;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
   font-size: 18px;
-  margin-top: 10px;
+  background-color: #fea985;
 `;
 
 const CloseButton = styled.div`
@@ -52,5 +68,26 @@ const CloseButton = styled.div`
 `;
 
 const ModalSeatInfo = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+`;
+
+const ScreenDiv = styled.div`
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+`;
+
+const SeatDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const ButtonDiv = styled.div`
+  display: flex;
 `;
