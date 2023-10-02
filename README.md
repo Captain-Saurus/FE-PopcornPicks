@@ -7,3 +7,5 @@
 2. yarn install
 3. yarn start
 ```
+## Wiki 
+[FE Wiki](https://github.com/Captain-Saurus/FE-PopcornPicks/wiki)
