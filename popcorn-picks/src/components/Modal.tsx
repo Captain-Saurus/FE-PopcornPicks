@@ -7,31 +7,42 @@ import {
 } from "../constants/constants";
 import ReservationSeatBox from "../styles/components/reservation/ReservationSeatBox";
 import Button from "../styles/components/common/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { closeModal } from "../store/modules/modalReducer";
+import { RootState } from "../store/store";
 
 const Modal: React.FC = () => {
-  const closeModal = () => {};
+  const dispatch = useDispatch();
+  const modalState = useSelector((state: RootState) => state.modal.isOpen);
+
+  const handleCloseModal = () => {
+    dispatch(closeModal());
+  };
+
   return (
     <>
-      <ModalContainer>
-        <ModalHeader>영화이름/시간/n관</ModalHeader>
-        <CloseButton>X</CloseButton>
-        <ModalSeatInfo>잔여좌석 n/n</ModalSeatInfo>
-        <ScreenDiv>screen</ScreenDiv>
-        <SeatDiv>
-          {/**
-           * @todo 시트박스 정보 , 위치에 따라 렌더링 수정 필요
-           */}
-          <ReservationSeatBox />
-          <ReservationSeatBox />
-          <ReservationSeatBox />
-          <ReservationSeatBox />
-          <ReservationSeatBox />
-        </SeatDiv>
-        <ButtonDiv>
-          <Button comment={"취소"} />
-          <Button comment={"인원/좌석 선택"} />
-        </ButtonDiv>
-      </ModalContainer>
+      {modalState && (
+        <ModalContainer>
+          <ModalHeader>영화이름/시간/n관</ModalHeader>
+          <CloseButton onClick={handleCloseModal}>X</CloseButton>
+          <ModalSeatInfo>잔여좌석 n/n</ModalSeatInfo>
+          <ScreenDiv>screen</ScreenDiv>
+          <SeatDiv>
+            {/**
+             * @todo 시트박스 정보 , 위치에 따라 렌더링 수정 필요
+             */}
+            <ReservationSeatBox />
+            <ReservationSeatBox />
+            <ReservationSeatBox />
+            <ReservationSeatBox />
+            <ReservationSeatBox />
+          </SeatDiv>
+          <ButtonDiv>
+            <Button comment={"취소"} />
+            <Button comment={"인원/좌석 선택"} />
+          </ButtonDiv>
+        </ModalContainer>
+      )}
     </>
   );
 };

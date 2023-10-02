@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ReservationBox from "./ReservationBox";
-import MovieCard from "../MovieCard";
+import { useDispatch } from "react-redux";
+import { openModal } from "../../../store/modules/modalReducer";
 
 const mockDataGenre = {
   title: "선호하는 장르",
@@ -19,17 +20,23 @@ const mockDataStyle = {
 };
 
 const ReservationOption: React.FC = () => {
+  const dispatch = useDispatch();
+
+  const handleOpenModal = () => {
+    dispatch(openModal());
+  };
+
   return (
     <>
       <OptionSection>
-        <MovieOptionDiv>
-          <ReservationBox data={mockDataGenre}></ReservationBox>
+        <MovieOptionDiv onClick={handleOpenModal}>
+          <ReservationBox data={mockDataGenre} />
         </MovieOptionDiv>
         <MovieOptionDiv>
-          <ReservationBox data={mockDataTime}></ReservationBox>
+          <ReservationBox data={mockDataTime} />
         </MovieOptionDiv>
         <MovieOptionDiv>
-          <ReservationBox data={mockDataStyle}></ReservationBox>
+          <ReservationBox data={mockDataStyle} />
         </MovieOptionDiv>
       </OptionSection>
       <RecommendSection>

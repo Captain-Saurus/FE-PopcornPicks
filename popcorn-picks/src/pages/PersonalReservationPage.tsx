@@ -7,13 +7,17 @@ import {
   LAPTOP_SIZE,
   LAPTOP_LARGE_SIZE,
 } from "../constants/constants";
+import Modal from "../components/Modal";
 
 const PersonalReservationPage: React.FC = () => {
   return (
-    <ReservationSection>
-      <Reservation />
-      <ReservationOption />
-    </ReservationSection>
+    <>
+      <ReservationSection>
+        <Reservation />
+        <ReservationOption />
+      </ReservationSection>
+      <Modal></Modal>
+    </>
   );
 };
 export default PersonalReservationPage;
