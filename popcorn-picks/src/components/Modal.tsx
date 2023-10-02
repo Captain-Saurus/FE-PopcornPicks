@@ -76,6 +76,7 @@ const CloseButton = styled.div`
   position: absolute;
   right: 10px;
   top: 10px;
+  cursor: pointer;
 `;
 
 const ModalSeatInfo = styled.div`

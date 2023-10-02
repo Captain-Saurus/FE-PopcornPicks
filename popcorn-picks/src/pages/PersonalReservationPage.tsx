@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import Reservation from "../styles/components/reservation/ReservationCommon";
 import ReservationOption from "../styles/components/reservation/ReservationOption";
@@ -8,15 +8,19 @@ import {
   LAPTOP_LARGE_SIZE,
 } from "../constants/constants";
 import Modal from "../components/Modal";
+import useHasClickOutSideWithModal from "../hooks/useHasClickOutsideWithModal";
 
 const PersonalReservationPage: React.FC = () => {
+  let wrapperRef = useRef<HTMLDivElement | null>(null);
+  useHasClickOutSideWithModal(wrapperRef);
+
   return (
     <>
-      <ReservationSection>
+      <ReservationSection ref={wrapperRef}>
         <Reservation />
         <ReservationOption />
       </ReservationSection>
-      <Modal></Modal>
+      <Modal />
     </>
   );
 };
