@@ -5,6 +5,7 @@ import {
   LAPTOP_LARGE_SIZE,
   LAPTOP_SIZE,
 } from "../constants/constants";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const Header: React.FC = () => {
               d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
             />
           </svg>
-          <p>로그인</p>
+          <Link to="/login">로그인</Link>
         </MainContentDiv>
         <MainContentDiv>
           <svg

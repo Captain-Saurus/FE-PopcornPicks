@@ -7,6 +7,7 @@ import MoviePage from "./pages/MoviePage";
 import DetailPage from "./pages/DetailPage";
 import TheaterPage from "./pages/TheaterPage";
 import ReservationPage from "./pages/ReservationPage";
+import LoginPage from "./pages/LoginPage";
 import PersonalReservationPage from "./pages/PersonalReservationPage";
 import Footer from "./components/Footer";
 
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           path="/personalReservation"
           element={<PersonalReservationPage />}
         />
+        <Route path="login" element={<LoginPage />} />
       </Routes>
       <Footer />
     </>
