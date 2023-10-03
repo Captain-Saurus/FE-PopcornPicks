@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeModal } from "../store/modules/modalReducer";
-
+/**
+ *
+ * @param wrapperRef
+ */
 const useHasClickOutSideWithModal = (
   wrapperRef: React.RefObject<HTMLDivElement>
 ) => {
