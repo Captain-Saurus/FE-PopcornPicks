@@ -10,6 +10,7 @@ import ReservationPage from "./pages/ReservationPage";
 import LoginPage from "./pages/LoginPage";
 import PersonalReservationPage from "./pages/PersonalReservationPage";
 import Footer from "./components/Footer";
+import MyPage from "./pages/MyPage";
 
 const App: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const App: React.FC = () => {
           element={<PersonalReservationPage />}
         />
         <Route path="login" element={<LoginPage />} />
+        <Route path="mypage" element={<MyPage />} />
       </Routes>
       <Footer />
     </>
