@@ -1,5 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import {
+  LAPTOP_LARGE_SIZE,
+  LAPTOP_SIZE,
+  TABLET_SIZE,
+} from "../constants/constants";
 import NaverLogin from "../assets/svgs/NaverLogin.svg";
 import KakaoLogin from "../assets/svgs/KakaoLogin.svg";
 import GoogleLogin from "../assets/svgs/GoogleLogin.svg";
@@ -58,15 +63,26 @@ const Login = styled.div`
   display: flex;
   flex-direction: column;
   height: 150px;
+  @media screen and (min-width: ${TABLET_SIZE}) {
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+  }
 `;
 
 const LoginBoxDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  height: 450px;
+  height: 60vh;
   border: 1px solid black;
   border-radius: 8px;
+  @media screen and (min-width: ${TABLET_SIZE}) {
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    width: 45%;
+  }
 `;
 
 const LoginDiv = styled.div`
@@ -101,6 +117,15 @@ const LoginOption = styled.div`
   font-size: 12px;
   justify-content: space-around;
   align-items: center;
+  @media screen and (min-width: ${TABLET_SIZE}) {
+    justify-content: center;
+  }
+  @media screen and (min-width: ${LAPTOP_SIZE}) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
+    font-size: 16px;
+  }
 `;
 
 const LoginIDSave = styled.div`
@@ -122,13 +147,36 @@ const LoginFindAndJoin = styled.div`
 
 const SNS = styled.div`
   display: flex;
+  height: 100%;
+
+  @media screen and (min-width: ${TABLET_SIZE}) {
+    flex-wrap: wrap;
+    width: 50%;
+  }
 `;
 
 const SNSLogin = styled.div`
   display: flex;
   flex-direction: column;
-
+  justify-content: space-around;
+  align-items: center;
   > img {
     width: 50%;
+  }
+  > p {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: ${TABLET_SIZE}) {
+    justify-content: center;
+    margin: 0 auto;
+
+    > p {
+      margin-bottom: 15px;
+    }
+    > img {
+      margin-bottom: 10px;
+    }
   }
 `;
