@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { ReactComponent as NaverLogin } from "../assets/svgs/NaverLogin.svg";
-import { ReactComponent as KakaoLogin } from "../assets/svgs/KakaoLogin.svg";
-import { ReactComponent as GoogleLogin } from "../assets/svgs/GoogleLogin.svg";
+import NaverLogin from "../assets/svgs/NaverLogin.svg";
+import KakaoLogin from "../assets/svgs/KakaoLogin.svg";
+import GoogleLogin from "../assets/svgs/GoogleLogin.svg";
 
 const LoginPage: React.FC = () => {
   return (
@@ -34,9 +34,9 @@ const LoginPage: React.FC = () => {
         <SNS>
           <SNSLogin>
             <p>소셜 로그인</p>
-            <KakaoLogin />
-            <NaverLogin />
-            <GoogleLogin />
+            <img src={NaverLogin} alt="네이버 로그인 버튼" />
+            <img src={KakaoLogin} alt="카카오 로그인 버튼" />
+            <img src={GoogleLogin} alt="구글 로그인 버튼" />
           </SNSLogin>
         </SNS>
       </LoginBoxDiv>
@@ -128,7 +128,7 @@ const SNSLogin = styled.div`
   display: flex;
   flex-direction: column;
 
-  > svg {
+  > img {
     width: 50%;
   }
 `;
