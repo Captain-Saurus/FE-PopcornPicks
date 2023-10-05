@@ -8,6 +8,7 @@ import {
 import NaverLogin from "../assets/svgs/NaverLogin.svg";
 import KakaoLogin from "../assets/svgs/KakaoLogin.svg";
 import GoogleLogin from "../assets/svgs/GoogleLogin.svg";
+import { Link } from "react-router-dom";
 
 const LoginPage: React.FC = () => {
   return (
@@ -32,7 +33,7 @@ const LoginPage: React.FC = () => {
             <LoginFindAndJoin>
               <p>아이디 찾기</p>
               <p>비밀번호 찾기</p>
-              <p>회원가입</p>
+              <Link to="/signup">회원가입</Link>
             </LoginFindAndJoin>
           </LoginOption>
         </Login>

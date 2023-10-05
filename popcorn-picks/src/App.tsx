@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 import PersonalReservationPage from "./pages/PersonalReservationPage";
 import Footer from "./components/Footer";
 import MyPage from "./pages/MyPage";
+import SignupPage from "./pages/SignupPage";
 
 const App: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         />
         <Route path="login" element={<LoginPage />} />
         <Route path="mypage" element={<MyPage />} />
+        <Route path="signup" element={<SignupPage />} />
       </Routes>
       <Footer />
     </>
