@@ -23,7 +23,7 @@ const ReservationOption: React.FC = () => {
   const dispatch = useDispatch();
 
   const handleOpenModal = () => {
-    dispatch(openModal());
+    dispatch(openModal("ReservationModal"));
   };
 
   return (
