@@ -7,6 +7,9 @@ import { openModal } from "../../store/modules/modalReducer";
 const SignupContainer = () => {
   const dispatch = useDispatch();
 
+  /**
+   * @todo 백엔드에서 회원정보 API받으면 검사후 해당 모달을 띄워야함
+   */
   const handleOpenModal = () => {
     dispatch(openModal("RegisteredMemberModal"));
   };
