@@ -4,7 +4,7 @@ import Button from "../../styles/components/common/Button";
 import { openModal } from "../../store/modules/modalReducer";
 import { useDispatch } from "react-redux";
 
-const CheckMember = () => {
+const CheckMember: React.FC = () => {
   const dispatch = useDispatch();
 
   /**
