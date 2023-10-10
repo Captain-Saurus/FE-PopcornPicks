@@ -3,7 +3,7 @@ import CheckMember from "./CheckMember";
 import Provision from "./Provision";
 
 const SignupContainer: React.FC = () => {
-  const [isMember, setIsMeber] = useState<boolean>(true);
+  const [isMember, setIsMeber] = useState<boolean>(false);
 
   const renderSignup = () => {
     if (isMember) {

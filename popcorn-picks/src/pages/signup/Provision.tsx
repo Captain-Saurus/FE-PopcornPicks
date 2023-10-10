@@ -1,40 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../styles/components/common/Button";
+import CreateAccount from "./CreateAccount";
 
-const Provision = () => {
+const Provision: React.FC = () => {
+  const [test, setTest] = useState<boolean>(true);
+
+  const testClick = () => {
+    setTest(false);
+  };
   return (
     <>
-      <ProvisionSection>
-        <ProvisionHeader>약관 동의</ProvisionHeader>
-        <ProvisionBox>
-          <ProvisionTitle>1. 어쩌고</ProvisionTitle>
-          <ProvisionContent></ProvisionContent>
-          <Agreediv>
-            <input type="checkbox" />
-            <p>동의합니다</p>
-          </Agreediv>
-        </ProvisionBox>
-        <ProvisionBox>
-          <ProvisionTitle>2. 어쩌고</ProvisionTitle>
-          <ProvisionContent></ProvisionContent>
-          <Agreediv>
-            <input type="checkbox" />
-            <p>동의합니다</p>
-          </Agreediv>
-        </ProvisionBox>
-        <ProvisionBox>
-          <ProvisionTitle>3. 어쩌고</ProvisionTitle>
-          <ProvisionContent></ProvisionContent>
-          <Agreediv>
-            <input type="checkbox" />
-            <p>동의합니다</p>
-          </Agreediv>
-        </ProvisionBox>
-        <ButtonDiv>
-          <Button comment="다음" />
-        </ButtonDiv>
-      </ProvisionSection>
+      {test ? (
+        <ProvisionSection>
+          <ProvisionHeader>약관 동의</ProvisionHeader>
+          <ProvisionBox>
+            <ProvisionTitle>1. 어쩌고</ProvisionTitle>
+            <ProvisionContent></ProvisionContent>
+            <Agreediv>
+              <input type="checkbox" />
+              <p>동의합니다</p>
+            </Agreediv>
+          </ProvisionBox>
+          <ProvisionBox>
+            <ProvisionTitle>2. 어쩌고</ProvisionTitle>
+            <ProvisionContent></ProvisionContent>
+            <Agreediv>
+              <input type="checkbox" />
+              <p>동의합니다</p>
+            </Agreediv>
+          </ProvisionBox>
+          <ProvisionBox>
+            <ProvisionTitle>3. 어쩌고</ProvisionTitle>
+            <ProvisionContent></ProvisionContent>
+            <Agreediv>
+              <input type="checkbox" />
+              <p>동의합니다</p>
+            </Agreediv>
+          </ProvisionBox>
+          <ButtonDiv onClick={testClick}>
+            <Button comment="다음" />
+          </ButtonDiv>
+        </ProvisionSection>
+      ) : (
+        <CreateAccount />
+      )}
     </>
   );
 };
