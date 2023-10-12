@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../styles/components/common/Button";
+import CompletedSign from "./CompletedSign";
 
 const CreateAccount: React.FC = () => {
-  return (
+  const [checkCreate, setCheckCreate] = useState<boolean>(false);
+
+  /**
+   * @todo 입력폼 유효성 검증 후 setCheckCrate true로 설정하기
+   */
+  return checkCreate ? (
+    <CompletedSign />
+  ) : (
     <CreateSection>
       <CreateHeader>계정 생성</CreateHeader>
       <CreateBox>
