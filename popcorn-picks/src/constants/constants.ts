@@ -19,10 +19,13 @@ const TABLET_SIZE: string = "768px";
 const LAPTOP_SIZE: string = "1024px";
 const LAPTOP_LARGE_SIZE: string = "1440px";
 
+const BACKEND_API_ADDRESS = process.env.REACT_APP_BACKEND_API_ADDRESS;
+
 export {
   REGION,
   RESERVATION_PROCESS,
   TABLET_SIZE,
   LAPTOP_SIZE,
   LAPTOP_LARGE_SIZE,
+  BACKEND_API_ADDRESS,
 };

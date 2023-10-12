@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import axios from "axios";
 import WhiteCircle from "../styles/components/WhiteCircle";
 import MovieImage from "../styles/components/common/MovieImage";
 import {
   TABLET_SIZE,
   LAPTOP_LARGE_SIZE,
   LAPTOP_SIZE,
+  BACKEND_API_ADDRESS,
 } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
 const MainPage: React.FC = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    getMovie();
+  }, []);
+
+  const getMovie = async () => {
+    try {
+      const response = await axios.get(
+        `${BACKEND_API_ADDRESS}movie/daily_box/list`
+      );
+      console.log(response);
+    } catch (e) {
+      throw new Error(`${e}`);
+    }
+  };
 
   //todo : 검색해서도 들어갈 수 있도록 영화의 이름을 라우팅으로 날리고 싶음
   const RoutingMovie = (index: number) => {
