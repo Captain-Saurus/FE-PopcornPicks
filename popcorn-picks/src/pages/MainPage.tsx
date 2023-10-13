@@ -10,11 +10,16 @@ import {
   BACKEND_API_ADDRESS,
 } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
+import QuickButton from "../styles/components/common/QuickButton";
+import Notice from "../assets/svgs/Notice.svg";
+import Event from "../assets/svgs/Event.svg";
+import Inquiry from "../assets/svgs/Inquiry.svg";
+
 const MainPage: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getMovie();
+    // getMovie();
   }, []);
 
   const getMovie = async () => {
@@ -49,7 +54,7 @@ const MainPage: React.FC = () => {
           );
         })}
       </RankSection>
-      <MainInfoSection>
+      {/* <MainInfoSection>
         <MainInfoDiv>
           <WhiteCircle />
           <WhiteCircle />
@@ -57,7 +62,12 @@ const MainPage: React.FC = () => {
           <WhiteCircle />
           <WhiteCircle />
         </MainInfoDiv>
-      </MainInfoSection>
+      </MainInfoSection> */}
+      <QuickSection>
+        <QuickButton imgSrc={Event} comment="이벤트" />
+        <QuickButton imgSrc={Notice} comment="공지사항" />
+        <QuickButton imgSrc={Inquiry} comment="1:1문의" />
+      </QuickSection>
     </>
   );
 };
@@ -157,6 +167,13 @@ const MainInfoDiv = styled.div`
   border-radius: 8px;
   justify-content: space-around;
   align-items: center;
+`;
+
+const QuickSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin: 0 auto;
 `;
 
 const dummy = [1, 2, 3, 4, 5];
