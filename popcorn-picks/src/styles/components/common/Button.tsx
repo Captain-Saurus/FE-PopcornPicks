@@ -5,11 +5,11 @@ import {
   TABLET_SIZE,
 } from "../../../constants/constants";
 
-interface ButtonProps {
+interface IButtonProps {
   comment: string | { text: string };
 }
 
-const Button: React.FC<ButtonProps> = ({ comment }) => {
+const Button: React.FC<IButtonProps> = ({ comment }) => {
   if (typeof comment === "string") {
     return <ButtonDiv>{comment}</ButtonDiv>;
   } else {
