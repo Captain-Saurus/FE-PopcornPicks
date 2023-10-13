@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
-import WhiteCircle from "../styles/components/WhiteCircle";
 import MovieImage from "../styles/components/common/MovieImage";
 import {
   TABLET_SIZE,
@@ -54,15 +53,6 @@ const MainPage: React.FC = () => {
           );
         })}
       </RankSection>
-      {/* <MainInfoSection>
-        <MainInfoDiv>
-          <WhiteCircle />
-          <WhiteCircle />
-          <WhiteCircle />
-          <WhiteCircle />
-          <WhiteCircle />
-        </MainInfoDiv>
-      </MainInfoSection> */}
       <QuickSection>
         <QuickButton imgSrc={Event} comment="이벤트" />
         <QuickButton imgSrc={Notice} comment="공지사항" />
@@ -140,33 +130,6 @@ const RankDiv = styled.div`
       font-size: 22px;
     }
   }
-`;
-
-const MainInfoSection = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  height: 80px;
-  margin-top: 8%;
-  @media screen and (min-width: ${TABLET_SIZE}) {
-    height: 100px;
-  }
-  @media screen and (min-width: ${LAPTOP_SIZE}) {
-    height: 120px;
-  }
-  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
-    height: 150px;
-  }
-`;
-
-const MainInfoDiv = styled.div`
-  display: flex;
-  width: 95%;
-  background-color: #fd7f49;
-  border-radius: 8px;
-  justify-content: space-around;
-  align-items: center;
 `;
 
 const QuickSection = styled.div`
