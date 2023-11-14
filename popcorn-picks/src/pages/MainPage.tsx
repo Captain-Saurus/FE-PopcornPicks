@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import MovieImage from "../styles/components/common/MovieImage";
@@ -9,6 +9,7 @@ import {
   BACKEND_API_ADDRESS,
 } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
+import { IMovie } from "../interfaces/movie";
 import QuickButton from "../styles/components/common/QuickButton";
 import Notice from "../assets/svgs/Notice.svg";
 import Event from "../assets/svgs/Event.svg";
@@ -16,9 +17,10 @@ import Inquiry from "../assets/svgs/Inquiry.svg";
 
 const MainPage: React.FC = () => {
   const navigate = useNavigate();
+  const [movie, setMovie] = useState<IMovie[]>();
 
   useEffect(() => {
-    // getMovie();
+    getMovie();
   }, []);
 
   const getMovie = async () => {
@@ -26,7 +28,7 @@ const MainPage: React.FC = () => {
       const response = await axios.get(
         `${BACKEND_API_ADDRESS}movie/daily_box/list`
       );
-      console.log(response);
+      setMovie(response?.data.data);
     } catch (e) {
       throw new Error(`${e}`);
     }
@@ -43,15 +45,16 @@ const MainPage: React.FC = () => {
         alt="영화 홍보 이미지"
       />
       <RankSection>
-        {dummy.map((item, index: number) => {
-          return (
-            <RankDiv key={index} onClick={() => RoutingMovie(index)}>
-              <p>1</p>
-              <MovieImage imgSrc="https://plus.unsplash.com/premium_photo-1675063044882-522a7d281b2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80" />
-              <p>영화 제목</p>
-            </RankDiv>
-          );
-        })}
+        {movie &&
+          movie.map((item: IMovie) => {
+            return (
+              <RankDiv key={item.rank} onClick={() => RoutingMovie(item.rank)}>
+                <p>{item.rank}</p>
+                <MovieImage imgSrc={item.movieImageUrl} />
+                <p>{item.movieName}</p>
+              </RankDiv>
+            );
+          })}
       </RankSection>
       <QuickSection>
         <QuickButton imgSrc={Event} comment="이벤트" />
