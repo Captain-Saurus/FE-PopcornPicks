@@ -1,0 +1,13 @@
+const { createProxyMiddleware } = require("http-proxy-middleware");
+
+module.exports = function (app) {
+  app.use(
+    createProxyMiddleware(
+      `${process.env.REACT_APP_API_ADDRESS}/movie/daily_box/list`,
+      {
+        target: `${process.env.REACT_APP_API_ADDRESS}/movie/daily_box/list`,
+        changeOrigin: true,
+      }
+    )
+  );
+};
