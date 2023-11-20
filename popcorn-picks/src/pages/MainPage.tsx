@@ -9,7 +9,8 @@ import {
   BACKEND_API_ADDRESS,
 } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
-import { IMovie } from "../interfaces/movie";
+import YouTube, { YouTubeProps } from "react-youtube";
+import { IMovie, ITrailers } from "../interfaces/movie";
 import QuickButton from "../styles/components/common/QuickButton";
 import Notice from "../assets/svgs/Notice.svg";
 import Event from "../assets/svgs/Event.svg";
@@ -18,9 +19,11 @@ import Inquiry from "../assets/svgs/Inquiry.svg";
 const MainPage: React.FC = () => {
   const navigate = useNavigate();
   const [movie, setMovie] = useState<IMovie[]>();
+  const [trailer, setTrailer] = useState<ITrailers[] | undefined>();
 
   useEffect(() => {
     getMovie();
+    // getTrailers();
   }, []);
 
   const getMovie = async () => {
@@ -34,15 +37,34 @@ const MainPage: React.FC = () => {
     }
   };
 
+  const getTrailers = async () => {
+    try {
+      const response = await axios.get(`${BACKEND_API_ADDRESS}movie/trailers`);
+      setTrailer(response?.data.data);
+    } catch (e) {
+      throw new Error(`${e}`);
+    }
+  };
+
   //todo : 검색해서도 들어갈 수 있도록 영화의 이름을 라우팅으로 날리고 싶음
   const RoutingMovie = (index: number) => {
     navigate(`/movie/${index}`);
   };
+
+  const opts: YouTubeProps["opts"] = {
+    width: "100%",
+    height: "300",
+  };
+
   return (
     <>
-      <MainImgDiv
+      {/* <MainImgDiv
         src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1156&q=80"
-        alt="영화 홍보 이미지"
+        alt="영화 트레일러"
+      /> */}
+      <YouTube
+        videoId={trailer ? trailer[0]?.movieId : "fR1Dd_EGBmM"}
+        opts={opts}
       />
       <RankSection>
         {movie &&
@@ -141,5 +163,3 @@ const QuickSection = styled.div`
   width: 95%;
   margin: 0 auto;
 `;
-
-const dummy = [1, 2, 3, 4, 5];

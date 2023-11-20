@@ -4,3 +4,8 @@ export interface IMovie {
   rank: number;
   rankAdjustment: string;
 }
+
+export interface ITrailers {
+  movieName: string;
+  movieId: string;
+}
