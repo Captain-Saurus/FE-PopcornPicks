@@ -23,7 +23,7 @@ const MainPage: React.FC = () => {
 
   useEffect(() => {
     getMovie();
-    // getTrailers();
+    getTrailers();
   }, []);
 
   const getMovie = async () => {
@@ -58,10 +58,6 @@ const MainPage: React.FC = () => {
 
   return (
     <>
-      {/* <MainImgDiv
-        src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1156&q=80"
-        alt="영화 트레일러"
-      /> */}
       <YouTube
         videoId={trailer ? trailer[0]?.movieId : "fR1Dd_EGBmM"}
         opts={opts}
@@ -87,28 +83,6 @@ const MainPage: React.FC = () => {
   );
 };
 export default MainPage;
-
-const ImgDiv = styled.img`
-  display: flex;
-  object-fill: cover;
-`;
-
-const MainImgDiv = styled(ImgDiv)`
-  width: 100%;
-  max-height: 180px;
-  @media screen and (min-width: ${TABLET_SIZE}) {
-    max-height: 200px;
-  }
-  @media screen and (min-width: ${LAPTOP_SIZE}) {
-    max-height: 250px;
-  }
-  @media screen and (min-width: ${LAPTOP_LARGE_SIZE}) {
-    max-height: 300px;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-`;
 
 const RankSection = styled.div`
   display: flex;

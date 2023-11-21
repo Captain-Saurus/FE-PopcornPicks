@@ -11,9 +11,13 @@ interface IQuickButton {
   comment: string;
 }
 
+const handleClick = () => {
+  alert("준비중입니다!");
+};
+
 const QuickButton: React.FC<IQuickButton> = ({ imgSrc, comment }) => {
   return (
-    <ButtonDiv>
+    <ButtonDiv onClick={handleClick}>
       <img src={imgSrc} alt="퀵버튼" />
       <p>{comment}</p>
     </ButtonDiv>
